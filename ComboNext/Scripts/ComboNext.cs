@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -14,7 +14,7 @@ public class ComboNext : MonoBehaviour
     [Header("Properties")]
     public List<ComboNextMember> Members;
 
-    public ComboNextCallback Callback;
+    public ComboNextCallback OnMemberChange;
 
     #region Fields
 
@@ -75,7 +75,7 @@ public class ComboNext : MonoBehaviour
 
         SetUI();
 
-        Callback.Invoke(CurrentIndex);
+        OnMemberChange.Invoke(CurrentIndex);
     }
 
     /// <summary>
@@ -96,7 +96,7 @@ public class ComboNext : MonoBehaviour
 
         SetUI();
 
-        Callback.Invoke(CurrentIndex);
+        OnMemberChange.Invoke(CurrentIndex);
     }
 
     /// <summary>
@@ -115,7 +115,7 @@ public class ComboNext : MonoBehaviour
 
         SetUI();
 
-        Callback.Invoke(CurrentIndex);
+        OnMemberChange.Invoke(CurrentIndex);
     }
 
     /// <summary>
